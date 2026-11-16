@@ -1,0 +1,41 @@
+{
+  "entity": {
+    "switch": {
+      "power": { "default": "mdi:projector" },
+      "shutter_open": { "default": "mdi:projector-screen", "state": { "off": "mdi:projector-screen-off" } },
+      "freeze": { "default": "mdi:pause-box" },
+      "realblack": { "default": "mdi:brightness-4" },
+      "stealth_mode": { "default": "mdi:led-off" }
+    },
+    "select": {
+      "input": { "default": "mdi:video-input-hdmi" },
+      "profile": { "default": "mdi:tune-variant" },
+      "test_pattern": { "default": "mdi:grid" },
+      "fan_profile": { "default": "mdi:fan" },
+      "litelock": { "default": "mdi:white-balance-sunny" }
+    },
+    "number": {
+      "laser_power": { "default": "mdi:brightness-6" },
+      "lens_horizontal": { "default": "mdi:arrow-left-right" },
+      "lens_vertical": { "default": "mdi:arrow-up-down" },
+      "lens_zoom": { "default": "mdi:magnify-plus-outline" },
+      "lens_focus": { "default": "mdi:image-filter-center-focus" }
+    },
+    "sensor": {
+      "power_state": { "default": "mdi:projector" },
+      "laser_hours": { "default": "mdi:timer-outline" },
+      "signal": { "default": "mdi:video-input-hdmi" },
+      "resolution": { "default": "mdi:monitor-screenshot" },
+      "dynamic_range": { "default": "mdi:hdr" },
+      "status": { "default": "mdi:check-circle-outline" },
+      "last_message": { "default": "mdi:message-text-outline" }
+    },
+    "button": {
+      "lens_calibrate": { "default": "mdi:target" },
+      "lens_home": { "default": "mdi:home-import-outline" }
+    }
+  },
+  "services": {
+    "send_command": { "service": "mdi:console-line" }
+  }
+}
