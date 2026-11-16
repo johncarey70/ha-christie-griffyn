@@ -42,8 +42,7 @@ def load_source(path: Path) -> Image.Image:
     width, height = im.size
     for y in range(height):
         for x in range(width):
-            red, green, blue, alpha = pixels[x, y]
-            if alpha == 0:
+            if pixels[x, y][3] == 0:
                 pixels[x, y] = (0, 0, 0, 0)
     return im
 
