@@ -1,0 +1,21 @@
+send_command:
+  fields:
+    config_entry_id:
+      required: false
+      selector:
+        config_entry:
+          integration: christie_griffyn
+    command:
+      required: true
+      example: "(LAS+POWR?)"
+      selector:
+        text:
+    timeout:
+      required: false
+      default: 8
+      selector:
+        number:
+          min: 0.5
+          max: 60
+          step: 0.5
+          unit_of_measurement: s

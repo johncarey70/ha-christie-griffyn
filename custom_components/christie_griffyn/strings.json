@@ -1,0 +1,377 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Christie Griffyn",
+        "description": "Enter the projector's address. Only read-only queries are sent to check it.",
+        "data": {
+          "host": "Host",
+          "port": "Port",
+          "name": "Name"
+        },
+        "data_description": {
+          "host": "IP address or host name of the projector.",
+          "port": "TCP port for Christie serial commands over Ethernet (3002 unless changed on the projector).",
+          "name": "Name for the device in Home Assistant."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not connect. Check the address, the port, and that the projector's Ethernet port allows serial access.",
+      "not_christie": "Something answered, but not like a Christie TruLife+ projector.",
+      "no_id": "The projector reported neither a MAC address nor a serial number.",
+      "unknown": "Unexpected error. See the log."
+    },
+    "abort": {
+      "already_configured": "This projector is already set up."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Polling",
+        "data": {
+          "scan_interval": "Seconds between polls"
+        },
+        "data_description": {
+          "scan_interval": "Power, shutter, input and signal are read every poll; other settings and status every fourth poll."
+        }
+      }
+    }
+  },
+  "entity": {
+    "switch": {
+      "power": {
+        "name": "Power"
+      },
+      "shutter_open": {
+        "name": "Shutter open"
+      },
+      "freeze": {
+        "name": "Freeze image"
+      },
+      "osd": {
+        "name": "On-screen display"
+      },
+      "realblack": {
+        "name": "RealBlack"
+      },
+      "stealth_mode": {
+        "name": "Stealth mode"
+      },
+      "camera_friendly_color": {
+        "name": "Camera friendly color"
+      },
+      "enhanced_healing": {
+        "name": "Enhanced DMD healing"
+      },
+      "auto_power_on": {
+        "name": "Auto power on"
+      },
+      "electronics_on_in_standby": {
+        "name": "Keep electronics on in standby"
+      },
+      "film_mode_detect": {
+        "name": "Film mode detect"
+      },
+      "video_thumbnails": {
+        "name": "Video thumbnails"
+      },
+      "lens_lock": {
+        "name": "Lens lock"
+      },
+      "front_ir": {
+        "name": "Front IR sensor"
+      },
+      "rear_ir": {
+        "name": "Rear IR sensor"
+      },
+      "wired_keypad": {
+        "name": "Wired keypad"
+      },
+      "invert_3d": {
+        "name": "Invert 3D eyes"
+      },
+      "keystone_gain_compensation": {
+        "name": "Keystone gain compensation"
+      },
+      "black_level_offsets": {
+        "name": "Black level offsets"
+      }
+    },
+    "select": {
+      "input": {
+        "name": "Input"
+      },
+      "input_slot": {
+        "name": "Input (current port configuration)"
+      },
+      "port_configuration": {
+        "name": "Input port configuration"
+      },
+      "profile": {
+        "name": "Profile"
+      },
+      "test_pattern": {
+        "name": "Test pattern"
+      },
+      "engine_test_pattern": {
+        "name": "Engine test pattern"
+      },
+      "litelock": {
+        "name": "LiteLOC"
+      },
+      "fan_profile": {
+        "name": "Fan profile"
+      },
+      "gamma_function": {
+        "name": "Gamma function"
+      },
+      "color_space": {
+        "name": "Color space"
+      },
+      "resize": {
+        "name": "Resize"
+      },
+      "mode_3d": {
+        "name": "3D mode"
+      },
+      "sync_out_3d": {
+        "name": "3D sync out"
+      },
+      "warp": {
+        "name": "Warp"
+      },
+      "edge_blend": {
+        "name": "Edge blend"
+      },
+      "black_level_blend": {
+        "name": "Black level blend"
+      },
+      "color_enable": {
+        "name": "Color enable"
+      },
+      "edid_frame_rate": {
+        "name": "EDID frame rate"
+      },
+      "screen_orientation": {
+        "name": "Screen orientation"
+      },
+      "splash_color": {
+        "name": "Splash screen color"
+      },
+      "osd_position": {
+        "name": "Menu position"
+      },
+      "christie_link_input": {
+        "name": "Christie Link input"
+      },
+      "sdi_payload": {
+        "name": "SDI payload"
+      },
+      "language": {
+        "name": "Menu language"
+      },
+      "temperature_units": {
+        "name": "Temperature units"
+      }
+    },
+    "number": {
+      "laser_power": {
+        "name": "Laser power"
+      },
+      "red_laser": {
+        "name": "Red laser drive"
+      },
+      "green_laser": {
+        "name": "Green laser drive"
+      },
+      "blue_laser": {
+        "name": "Blue laser drive"
+      },
+      "white_x": {
+        "name": "White point x"
+      },
+      "white_y": {
+        "name": "White point y"
+      },
+      "sharpness": {
+        "name": "Sharpness"
+      },
+      "gamma": {
+        "name": "Gamma"
+      },
+      "max_luminance": {
+        "name": "Maximum luminance"
+      },
+      "min_luminance": {
+        "name": "Minimum luminance"
+      },
+      "pq_white_level": {
+        "name": "PQ white level"
+      },
+      "frame_delay": {
+        "name": "Frame delay"
+      },
+      "realblack_delay": {
+        "name": "RealBlack delay"
+      },
+      "realblack_threshold": {
+        "name": "RealBlack threshold"
+      },
+      "lens_horizontal": {
+        "name": "Lens horizontal"
+      },
+      "lens_vertical": {
+        "name": "Lens vertical"
+      },
+      "lens_zoom": {
+        "name": "Lens zoom"
+      },
+      "lens_focus": {
+        "name": "Lens focus"
+      }
+    },
+    "button": {
+      "refresh": {
+        "name": "Refresh"
+      },
+      "lens_calibrate": {
+        "name": "Calibrate lens"
+      },
+      "lens_home": {
+        "name": "Lens home"
+      }
+    },
+    "sensor": {
+      "laser_hours": {
+        "name": "Laser hours"
+      },
+      "laser_standby_hours": {
+        "name": "Laser standby hours"
+      },
+      "laser_on_cycles": {
+        "name": "Laser on cycles"
+      },
+      "projector_hours": {
+        "name": "Projector hours"
+      },
+      "diffuser_hours": {
+        "name": "Diffuser hours"
+      },
+      "light_source_state": {
+        "name": "Light source state"
+      },
+      "litelock_status": {
+        "name": "LiteLOC status"
+      },
+      "signal": {
+        "name": "Signal"
+      },
+      "resolution": {
+        "name": "Resolution"
+      },
+      "frame_rate": {
+        "name": "Frame rate"
+      },
+      "color_format": {
+        "name": "Color format"
+      },
+      "bit_depth": {
+        "name": "Bit depth"
+      },
+      "dynamic_range": {
+        "name": "Dynamic range"
+      },
+      "output_frequency": {
+        "name": "Output frequency"
+      },
+      "frame_delay_time": {
+        "name": "Frame delay time"
+      },
+      "inlet_voltage": {
+        "name": "Inlet voltage"
+      },
+      "psu_output_current": {
+        "name": "Power supply current"
+      },
+      "diffuser_speed": {
+        "name": "Diffuser speed"
+      },
+      "pitch_roll": {
+        "name": "Pitch / roll"
+      },
+      "laser_cpu_temperature": {
+        "name": "Laser CPU temperature"
+      },
+      "last_message": {
+        "name": "Last message"
+      },
+      "power_state": {
+        "name": "Power state",
+        "state": {
+          "standby": "Standby",
+          "on": "On",
+          "cooling_down": "Cooling down",
+          "warming_up": "Warming up"
+        }
+      },
+      "status": {
+        "name": "Status",
+        "state": {
+          "ok": "OK",
+          "warning": "Warning",
+          "error": "Error"
+        }
+      }
+    },
+    "binary_sensor": {
+      "problem": {
+        "name": "Problem"
+      },
+      "signal_present": {
+        "name": "Signal present"
+      },
+      "frame_locked": {
+        "name": "Frame locked"
+      }
+    }
+  },
+  "services": {
+    "send_command": {
+      "name": "Send command",
+      "description": "Send a Christie serial command and return the projector's replies.",
+      "fields": {
+        "config_entry_id": {
+          "name": "Projector",
+          "description": "Needed only if more than one projector is set up."
+        },
+        "command": {
+          "name": "Command",
+          "description": "For example (PWR?) or (SIN 1). Brackets are optional."
+        },
+        "timeout": {
+          "name": "Timeout",
+          "description": "Seconds to wait for the reply."
+        }
+      }
+    }
+  },
+  "exceptions": {
+    "command_failed": {
+      "message": "The projector did not accept the command: {error}"
+    },
+    "update_failed": {
+      "message": "Could not read the projector: {error}"
+    },
+    "invalid_command": {
+      "message": "Invalid command: {error}"
+    },
+    "no_entry": {
+      "message": "No loaded Christie projector found."
+    },
+    "choose_entry": {
+      "message": "More than one projector is set up; choose one."
+    }
+  }
+}
