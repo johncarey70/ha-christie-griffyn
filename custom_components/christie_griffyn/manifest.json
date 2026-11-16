@@ -1,0 +1,18 @@
+{
+  "domain": "christie_griffyn",
+  "name": "Christie Griffyn (TruLife+)",
+  "codeowners": [
+    "@johncarey70"
+  ],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/johncarey70/ha-christie-griffyn",
+  "integration_type": "device",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/johncarey70/ha-christie-griffyn/issues",
+  "loggers": [
+    "custom_components.christie_griffyn"
+  ],
+  "requirements": [],
+  "version": "0.1.1"
+}
